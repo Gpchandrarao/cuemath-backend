@@ -14,12 +14,7 @@ const GAMES = {};
 // Host client
 app.use(express.static(path.resolve("../dist")));
 app.get("/*", (req, res) => {
-  res.sendFile(
-    path.resolve(
-      "../dist",
-      "https://6604f8691470e5392d4bb5c0--superb-pie-9c4627.netlify.app/"
-    )
-  );
+  res.sendFile(path.resolve("../dist", "index.html"));
 });
 
 io.on("connection", (client) => {
